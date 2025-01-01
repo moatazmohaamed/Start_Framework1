@@ -1,0 +1,41 @@
+<section class="d-flex justify-content-center align-items-center py-5">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center text-uppercase fw-bolder">portfolio component</h1>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="line ms-auto"></div>
+        <i class="fa-solid fa-star px-4 fs-4"></i>
+        <div class="line me-auto"></div>
+      </div>
+      @for (img of imgSrc; track $index) {
+      <div class="col-md-4 g-5">
+        <div class="portfolio-img position-relative ">
+          <img [src]="img" alt="porfolio images" class="w-100 rounded-3">
+          <div (click)='currentSrc = img; currentImgIndex = $index'
+            class="position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center overlay rounded-3">
+            <i class="fa fa-plus fa-6x text-white plus"></i>
+          </div>
+        </div>
+      </div>
+      } @empty {
+      <h1>No imgs found</h1>
+      }
+    </div>
+
+    @if (currentSrc) {
+    <div (click)="currentSrc = ''"
+      class="position-fixed start-0 top-0 w-100 d-flex justify-content-center align-items-center bg-opacity-75 bg-dark z-3 layer">
+    </div>
+    <div
+      class="popup position-absolute start-0 top-0  w-100 d-flex justify-content-center align-items-center bg-opacity-75 bg-dark"
+      #popUp>
+      <div class="position-fixed z-3 d-flex align-items-center">
+        <i (click)="prevImg()" class="fa fa fa-arrow-circle-left fs-1 text-white mx-0  mx-md-2"></i>
+        <img [src]='currentSrc' alt="close look to photo" class="rounded-3 img">
+        <i (click)="nextImg()" class="fa fa fa-arrow-circle-right fs-1 text-white mx-0  mx-md-2"></i>
+      </div>
+    </div>
+    }
+
+  </div>
+</section>

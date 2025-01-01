@@ -1,0 +1,24 @@
+section {
+  min-height: calc(-109 + 100vh);
+  margin-top: 4rem;
+}
+
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: #000000;
+}
+
+.btn {
+  background: #1abc9c !important;
+  border: none;
+}
+
+label {
+  color: #1abc9c;
+  transition: top .5s;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}

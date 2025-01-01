@@ -1,0 +1,49 @@
+section {
+  min-height: calc(-109 + 100vh);
+  margin-top: 5.375rem;
+}
+
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: #000000;
+}
+
+.plus {
+  font-size: 7rem !important;
+}
+
+
+.overlay {
+  background-color: #1abc9c;
+  transition: all 500ms;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.portfolio-img:hover .overlay {
+  opacity: 1;
+}
+
+.popup img {
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 567px) {
+  .popup img {
+    width: 80%;
+  }
+}
+
+.popup i {
+  cursor: pointer;
+}
+
+.popup {
+  min-height: 102vh;
+}
+
+.layer {
+  min-height: 102vh;
+}

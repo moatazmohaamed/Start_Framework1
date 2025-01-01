@@ -1,0 +1,22 @@
+<nav [class]="isScrolled > 50 ? 'navbar navbar-expand-lg py-2 fixed-top' : 'navbar navbar-expand-lg py-4 fixed-top'"> >
+  <div class="container">
+    <a class="navbar-brand fs-2 fw-bolder text-uppercase" routerLink="/home">Start Framework</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars-staggered text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0 fs-5 fw-bold text-uppercase">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="bg-main rounded" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="bg-main rounded" routerLink="/portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="bg-main rounded" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

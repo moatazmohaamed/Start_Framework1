@@ -1,0 +1,15 @@
+footer {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.icons i {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+section {
+  background: #252427;
+  color: #fff;
+}
