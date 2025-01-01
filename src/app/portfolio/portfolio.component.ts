@@ -18,7 +18,6 @@ export class PortfolioComponent {
   ];
 
   currentSrc: string = '';
-  currentImgIndex: number = 0;
 
   nextImg(): void {
     const currentIndex = this.imgSrc.indexOf(this.currentSrc);
